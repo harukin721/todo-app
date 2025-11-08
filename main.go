@@ -33,4 +33,9 @@ func main() {
 	u.UpdateUser()
 	u, _ = models.GetUser(1)
 	fmt.Println(u)
+
+	fmt.Println("----- Delete User -----")
+	u.DeleteUser()
+	u, _ = models.GetUser(1)
+	fmt.Println(u)
 }
