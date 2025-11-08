@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// これがないとターミナルでSQLの結果が確認できない
 	fmt.Println(models.Db)
 
 	// u := &models.User{}
@@ -37,7 +38,10 @@ func main() {
 	// 	fmt.Println(todo)
 	// }
 
-	t, _ := models.GetTodo(1)
-	t.Content = "Updated Todo!!!"
-	t.UpdateTodo()
+	// t, _ := models.GetTodo(1)
+	// t.Content = "Updated Todo!!!"
+	// t.UpdateTodo()
+
+	t, _ := models.GetTodo(3)
+	t.DeleteTodo()
 }
